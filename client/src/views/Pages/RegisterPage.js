@@ -58,7 +58,11 @@ export default function RegisterPage() {
       console.log(response);
     });
   };
- 
+
+  const confirmRegister = () => {
+    register();
+    window.alert("Registration Complete");
+  };
 
   return (
     <div className={classes.container}>
@@ -194,7 +198,7 @@ export default function RegisterPage() {
                       }
                     />
                     <div className={classes.center}>
-                      <Button onClick={register} round color="primary">
+                      <Button onClick={confirmRegister} round color="primary">
                         Get started
                       </Button>
                     </div>
